@@ -7,6 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
+
+    <script src="./js/script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--https://cdnjs.com/libraries/font-awesome para svns, css, e fonts.
+    comparando esses dois, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css 
+    e https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css,
+    os elementos do segundo link foram feitos com a técnica de minificaçao, para salvar espaço.
+    você quer usar o código especificamente ao invés de downloads destes sites para evitar riscos de segurança como injeções.-->
+
+    <script>
+
+        //COMENTÁRIO DE LINHA
+
+        /*
+            COMENTÁRIO DE BLOCO
+        */
+
+        //Declarando variáveis com a palavra reservada ( var )
+        // var nr1 = 10;
+        // var nr2 = 5;
+
+        //Objetos que dão saida em informações no Javascript
+
+        //console.log(parâmetro) = Demonstra a saída no console da ferramenta do desenvolvedor.
+        // console.log(nr1 + nr2);
+        
+        //document.write(parâmetro) = Demonstra a saída na página html.
+        // document.write(nr1 + nr2);
+
+        //Atrelando um evento click à um elemento no HTML.
+        //<h2 id="titulo" class="tit-sec">Seção Fotos</h2>
+        // const h2Element = document.getElementById("titulo");
+
+        // console.log(h2Element.textContent);
+
+    </script>
+
 </head>
 
 <body>
@@ -20,10 +58,16 @@
             <a href="#">Item-2</a>
             <a href="#">Item-3</a>
         </nav>
+
     </header>
     <!-- CABEÇALHO -->
 
-    <h2 class="tit-sec">Seção Fotos</h2>
+    <h2 id="titulo" class="tit-sec">Seção Fotos</h2>
+
+    <!-- <script>
+        const h2Element = document.getElementById("titulo");
+        console.log(h2Element.textContent);
+    </script> -->
 
     <!-- CONTEÚDO -->
     <!-- section.conteudo>div*6>img+p{Legenda} -->
@@ -58,31 +102,43 @@
     <!-- RODAPÉ -->
     <footer class="rodape">
         <h2>Fale Conosco</h2>
+
+        <div>
+            <form action="index.html" method="get" onsubmit="return false">
+                <fieldset>
+                    <legend>Contato</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Email" pattern="[A-Za-z0-9]"> <!--required retirado (era antes do placeholder). pattern limita caracteres digitaveis em um campo.-->
+                    </div>
+                    <div>
+                        <label for="idPass">Senha</label>
+                        <input type="password" name="txtPass" id="idPass" placeholder="Senha"> <!--required retirado (era antes do placeholder)-->
+                        <!--https://fontawesome.com/v4 para icones e code destes etc, exemplo abaixo-->
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <!--<i class="fa fa-eye-slash" aria-hidden="true"></i>-->
+                        <!--você quer usar o código especificamente ao invés de downloads destes sites para evitar riscos de segurança como injeções.-->
+                        <!--Exercício: toggle slash eye icon-->
+                    </div>
+                    <div>
+                        <label for="idGrava">Guardar Dados</label>
+                        <input type="checkbox" name="txtGrava" id="idGrava">
+                    </div>
+                    <div>
+                        <button type="submit" id="btnSubmit">Entrar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
         <nav>
             <a href="#"><img src="./img/social-1.png" alt="Logo github"></a>
             <a href="#"><img src="./img/social-2.png" alt="Logo facebook"></a>
             <a href="#"><img src="./img/social-3.png" alt="Logo twitter"></a>
         </nav>
 
-        <form action="" method="get" onsubmit="return false">
-            <fieldset>
-                <legend>Contato</legend>
-                <div>
-                    <label for="idEmail">Email</label>
-                    <input type="email" name="txtEmail" id="idEmail" required placeholder="Email">
-                </div>
-                <div>
-                    <label for="idNome">Nome</label>
-                    <input type="text" name="txtNome" id="idNome" required placeholder="Nome">
-                </div>
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-            </fieldset>
-        </form>
-    
     </footer>
     <!-- RODAPÉ -->
-
 </body>
+
 </html>

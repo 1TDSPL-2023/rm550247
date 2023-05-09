@@ -1,4 +1,3 @@
-
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -10,11 +9,11 @@
 .cabecalho nav{
     display: flex;
     justify-content: space-around;
-    width: 60%;
-    height: 100%;
+    width: 60vw;
+    height: 45vh;
     flex-wrap: wrap;
 }
-
+ 
 .cabecalho img{
     width: 30%;
     max-width: 30%;
@@ -27,12 +26,13 @@
     font-weight: 700;
     color: #fff;
     text-align: center;
+    padding: 20vh 0;
 }
 
 /* UTILIZANDO A PSEUDO CLASSE HOVER */
-.cabecalho a:hover {
-    color: #000000;
-    background-color: #fff;
+        .cabecalho a:hover {
+            color: #000000;
+            background-color: #fff;
 
-}
+        }
 /* UTILIZANDO A PSEUDO CLASSE HOVER */
